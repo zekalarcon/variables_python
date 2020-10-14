@@ -11,12 +11,10 @@ Programa creado para que practiquen los conocimietos
 adquiridos durante la semana
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
-__version__ = "1.3"
+__author__ = "Ezequiel Alarcon"
+__email__ = "zekalarcon@gmail.com"
 
-
-def ej1():
+def ej1():  
     # Ejercicios de práctica con números
     print('Nuestra primera calculadora')
     '''
@@ -34,6 +32,42 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
+    print("Ingrese dos numeros para para saber el resultado de la suma")
+    primer_numero = float(input())
+    segundo_numero = float(input())
+
+    suma = primer_numero + segundo_numero
+    print("La suma entre los numeros", primer_numero, "y", segundo_numero, "es:", suma)
+
+    print("Ingrese dos numeros para para saber el resultado de la resta")
+    primer_numero = float(input())
+    segundo_numero = float(input())
+
+    resta = primer_numero - segundo_numero
+    print("La resta entre los numeros", primer_numero, "y", segundo_numero, "es:", resta)
+
+    print("Ingrese dos numeros para para saber el resultado de la multiplicacion")
+    primer_numero = float(input())
+    segundo_numero = float(input())
+
+    multiplicacion = primer_numero * segundo_numero
+    print("La multiplicacion entre los numeros", primer_numero, "y", segundo_numero, "es:", multiplicacion)
+
+    print("Ingrese dos numeros para para saber el resultado de la division")
+    primer_numero = float(input())
+    segundo_numero = float(input())
+
+    division = primer_numero / segundo_numero
+    print("La division entre los numeros", primer_numero, "y", segundo_numero, "es:", division)
+
+    print("Ingrese dos numeros para para saber el resultado de la potencia")
+    primer_numero = float(input())
+    segundo_numero = float(input())
+
+    potencia = primer_numero ** segundo_numero
+    print("La potencia con base", primer_numero, "y exponente", segundo_numero, "es:", potencia)
+
+
 
 
 def ej2():
@@ -56,6 +90,22 @@ def ej2():
 
     '''
 
+    print("Ingrese nombre completo")
+
+    nombre_completo = str(input())
+    nombre_completo = nombre_completo.title()
+
+    print("Ingrese numero de DNI sin puntos")
+    dni = int(input())
+    
+    print("Ingrese su edad")
+    edad = int(input())
+
+    print("Ingrese su altura")
+    altura = float(input())
+
+    print("Nombre completo:", nombre_completo, "DNI:", dni)
+    print("Nombre completo:", nombre_completo, "Edad:", edad, "Altura:", altura)
 
 def ej3():
     print('Ejercicios de práctica con cadenas')
@@ -89,6 +139,22 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
 
     '''
+
+    print("Ingrese nombre y apellido de su madre y padre")
+    print("Nombre y apellido de la madre:")
+    nombre_madre = str(input())
+    nombre_madre, apellido_madre = nombre_madre.split(" ")
+    print("Nombre y apellido del padre:")
+    nombre_padre = str(input())
+    nombre_padre, apellido_padre = nombre_padre.split(" ")
+    print("Ingrese nombre del hijo:")
+    nombre_hijo = str(input())
+    nombre_completo_hijo = nombre_hijo + " " + apellido_madre + " " + apellido_padre
+    print("Nombre completo del hijo:", nombre_completo_hijo.title())
+
+
+
+
 
 
 def ej4():
@@ -124,6 +190,19 @@ def ej4():
     Cualquier duda con el método split pueden consultarla por el campus
     '''
 
+    print("Ingrese nombre y apellido de una persona:")
+    primer_persona = str(input())
+    
+    print("Ahora ingrese nombre y apellido de otra persona para saber si hay parentesco:")
+    segunda_persona = str(input())
+    nombre, apellido = segunda_persona.split(" ")
+
+    parentesco = apellido in primer_persona
+
+    print("Hay parentesco entre", primer_persona.title(), "y", segunda_persona.title(), "?", parentesco)
+
+
+
 
 def ej5():
     # Ejercicios de práctica con cadenas
@@ -150,11 +229,18 @@ def ej5():
     Cualquier duda con estos métodos pueden consultarla por el campus
     '''
 
+    print("Ingrese su nombre completo:")
+    nombre_completo = str(input())
+    print("Todo miniscula:", nombre_completo.lower())
+    print("Todo mayuscula:", nombre_completo.upper())
+    print("Primer letra mayuscula:", nombre_completo.capitalize())
+    print("Primeras letras en mayusculas:", nombre_completo.title())
+
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    # ej2()
-    # ej3()
-    # ej4()
-    # ej5()
+    ej2()
+    ej3()
+    ej4()
+    ej5()
